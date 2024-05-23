@@ -1,0 +1,253 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+ * {
+    font-family: 'Inria Sans', sans-serif;
+ }
+
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+ }
+
+ .container h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0;
+    display: contents;
+ }
+
+ .container .title__description {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 2em;
+ }
+
+ .file__input {
+    display: flex;
+    flex-direction: column-reverse;
+ }
+
+ input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    font-family: inherit;
+    background: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+ }
+
+ input[type=file]::file-selector-button:hover {
+    background: rgb(76, 76, 76);
+ }
+
+ input[type=password] {
+    border: solid 1px black;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    background: rgba(254, 254, 254, 0.604);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
+    cursor: text;
+    transition: background .2s ease-in-out;
+ }
+
+
+
+
+ .submit__btn {
+    display: block;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    background: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+ }
+
+ .submit__btn:hover {
+    background-color: rgb(58, 57, 57);
+ }
+
+ .sending_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+ }
+
+
+ .password__input {
+    display: flex;
+    flex-direction: column-reverse;
+ }
+
+ .container {
+    padding: 2em 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(17, 17, 17, 0.933);
+    text-shadow: 0.05em 0.1em 0.5em rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    border: solid 1px rgba(255, 255, 255, 0.533);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, 0.067);
+    max-width: 400px;
+    /* Adjust the maximum width as needed */
+    /* width: 100%; */
+ }
+
+
+ .bubble {
+    margin: 1em 0;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 40vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    transition: all 10s;
+ }
+
+ .app {
+    background: rgba(255, 255, 255, 0.533);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    backdrop-filter: blur(3em);
+    -webkit-backdrop-filter: blur(3em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .app .title {
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 2em;
+    color: rgba(17, 17, 17, 0.933);
+    text-shadow: 0.05em 0.1em 0.5em rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    border: solid 1px rgba(255, 255, 255, 0.533);
+    border-radius: 2em;
+    box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, 0.067);
+ }
+
+ .file__uploaded {
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 1em;
+    line-break: anywhere;
+    color: rgba(17, 17, 17, 0.933);
+    text-shadow: 0.05em 0.1em 0.5em rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    border: solid 1px rgba(255, 255, 255, 0.533);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, 0.067);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .file__uploaded a {
+   text-decoration: underline;
+   text-decoration-color: black;
+   color: black;
+   font-weight: bold;
+ }
+
+ .close-icon {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   height: 20px;
+   width: 20px;
+   color: red; /* You can set the color you prefer for the close icon */
+}
+
+ .error__container{
+   margin-bottom: 2em;
+    text-align: center;
+    padding: 1em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-break: anywhere;
+    background-color: red;
+    color: rgba(255, 255, 255, 0.933);
+    text-shadow: 0.05em 0.1em 0.5em rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    border: solid 1px rgba(255, 255, 255, 0.533);
+    border-radius: 1em;
+    box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, 0.067);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .container {
+       min-width: -webkit-fill-available;
+       max-width: -webkit-fill-available;
+       min-height: 500px;
+    }
+    .file__uploaded{
+      min-width: -webkit-fill-available;
+       max-width: -webkit-fill-available;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .container {
+       min-width: -webkit-fill-available;
+       max-width: -webkit-fill-available;
+       min-height: 500px;
+    }
+ }
+
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    .container {
+       min-width: 650px;
+       min-height: 500px;
+    }
+ }
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    .container {
+       min-width: 800px;
+       min-height: 500px;
+    }
+ }
+
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    .container {
+       min-width: 800px;
+       min-height: 500px;
+    }
+ }
