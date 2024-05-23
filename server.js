@@ -154,7 +154,7 @@ app
       }
 
       file.downloads++;
-      // await file.save();
+      await file.save();
 
       // Return the file URL for download
       return res.status(200).json({ path: file.path });
