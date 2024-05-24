@@ -91,6 +91,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
       originalName: req.file.originalname,
       createdAt: new Date(),
       createdBy: req.body.createdBy, // Store createdBy as a string
+      email: req.body.email, // Store createdBy as a string
       downloads: 0,
     };
 

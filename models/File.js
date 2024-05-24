@@ -6,6 +6,7 @@ const fileSchema = new mongoose.Schema({
     password: { type: String },
     createdAt: { type: Date, default: Date.now },
     createdBy: { type: String }, // Assuming you have a User model
+    email: { type: String }, // Assuming you have a User model
     downloads: { type: Number, default: 0 },
 });
 
