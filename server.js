@@ -120,7 +120,7 @@ app
 
       // Send back whether the file is password-protected
       return res.status(200).json({
-        fileUrl: file.fileUrl,
+        _id: file._id,
         passwordProtected: !!file.password,
         originalName: file.originalName, // Include other necessary details
       });
@@ -157,7 +157,11 @@ app
       await file.save();
 
       // Return the file URL for download
-      return res.status(200).json({ path: file.path });
+      return res.status(200).json({
+        _id: file._id,
+        originalName: file.originalName,
+        path: file.path,
+      });
     } catch (error) {
       console.error(error); // Log the error
       return res.status(500).json({ error: "Internal Server Error" });
